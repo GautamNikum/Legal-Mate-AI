@@ -27,7 +27,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(30,58,95,0.3),transparent_50%)]" />
       </div>
 
-      // Decorative icon removed
+    
       
       <div className="container mx-auto px-6 md:px-12 lg:px-16 relative">
         <div className="max-w-4xl">
