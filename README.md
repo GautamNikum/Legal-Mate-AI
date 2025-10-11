@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# LegalMate AI – AI-Powered Contract Drafting & Review
 
-## Project info
+LegalMate AI helps professionals draft and review contracts in minutes. Choose a contract template, add clauses, auto-fill important fields, and export to PDF. Review existing contracts to identify missing clauses, risky terms, and actionable improvements. Built with React, TypeScript, and a modern design system.
 
-**URL**: https://lovable.dev/projects/e1c1219a-31e4-42ca-b35a-ed493e4b2ba4
+## Demo Screens (Key Flows)
+- Draft: Select template → Add clauses → Provide details → Generate → Edit/Save/Export PDF
+- Review: Paste contract text → Run analysis → See missing clauses, risky terms, suggestions
+- Dashboard: Quick actions and recent activity scaffold
 
-## How can I edit this code?
+## Features
+- Contract Drafting (NDA, Service Agreement, Lease Agreement)
+- Language Support (English/Hindi)
+- Clause Library + Compliance Hints
+- Auto Summary of Generated Contract
+- Edit/Copy/Save (localStorage)
+- Export as PDF
+- Contract Review (missing clauses, risky terms with severity, suggestions)
+- Responsive, modern UI with shadcn/ui & Tailwind
 
-There are several ways of editing your application.
+## Tech Stack
+- Frontend: React 18, TypeScript, Vite
+- UI: Tailwind CSS, shadcn/ui, lucide-react
+- Routing: React Router
+- Data Layer: TanStack Query (scaffolded)
+- Validation: zod (available)
+- Charts/UX helpers: recharts, framer-motion (available)
+- Build/Quality: ESLint, TypeScript
 
-**Use Lovable**
+## Architecture & Notable Files
+- [index.html](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/index.html:0:0-0:0): App mount and metadata
+- [src/main.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/main.tsx:0:0-0:0): App bootstrap
+- [src/App.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/App.tsx:0:0-0:0): Providers + Router (`/`, `/auth`, `/dashboard`, `/draft`, `/review`)
+- [src/pages/Index.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Index.tsx:0:0-0:0): Marketing landing page (Header, Hero, Features, etc.)
+- [src/pages/Dashboard.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Dashboard.tsx:0:0-0:0): Quick actions and recent contracts scaffold
+- [src/pages/Draft.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Draft.tsx:0:0-0:0): Draft flow (templates, clauses, language, summary, PDF export)
+- [src/pages/Review.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Review.tsx:0:0-0:0): Review flow (analysis results: missing clauses, risks, suggestions)
+- `src/components/…`: Reusable UI and feature components (shadcn/ui based)
+- `src/utils/contractParser.ts`: `parseAdditionalInfo`, `formatContract`
+- `src/utils/pdfExport.ts`: PDF generation via `jspdf` + `html2canvas`
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e1c1219a-31e4-42ca-b35a-ed493e4b2ba4) and start prompting.
+## How It Works (Today vs. Future)
+- Today: Drafting and Review flows simulate AI responses for a smooth UX demo.
+- Future: Replace simulated timeouts with real AI endpoints (e.g., REST call in [Draft.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Draft.tsx:0:0-0:0) [handleGenerate](cci:1://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Draft.tsx:43:2-139:4) and [Review.tsx](cci:7://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Review.tsx:0:0-0:0) [handleReview](cci:1://file:///c:/Users/INDIA/Downloads/legalmate-ai-suite-main%20%281%29/legalmate-ai-suite-main/src/pages/Review.tsx:14:2-74:4)).
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
+Prerequisites: Node.js and npm
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+```bash
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e1c1219a-31e4-42ca-b35a-ed493e4b2ba4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
